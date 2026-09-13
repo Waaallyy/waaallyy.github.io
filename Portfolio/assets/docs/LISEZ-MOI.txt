@@ -1,0 +1,5 @@
+Place ici tes documents : rapports de stage, soutenances, attestations,
+certifications… (PDF de préférence).
+
+Relie-les ensuite depuis stages.html ou parcours.html, par exemple :
+    <a href="assets/docs/rapport-stage.pdf" target="_blank">Ouvrir le PDF</a>

@@ -1,0 +1,7 @@
+Dépose ton CV ici sous le nom : cv.pdf
+
+Le fichier est affiché dans la pop-up "Voir mon CV" de la page d'accueil
+(onglet PDF) et sert au bouton "Télécharger".
+
+Si tu préfères un autre nom de fichier, modifie les deux chemins
+"assets/cv/cv.pdf" dans index.html.

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ▼▼ À PERSONNALISER ▼▼ -->
+  <title>Portfolio de Raphaël Bierlaire</title>
+  <meta name="description" content="Portfolio de Raphaël Bierlaire, étudiant en BTS SIO option SLAM à Chambray-lès-Tours : parcours, stages, projets et compétences." />
+  <!-- ▲▲ À PERSONNALISER ▲▲ -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23192115'/><circle cx='50' cy='50' r='18' fill='%23EE7B3C'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ==================== ÉCRAN D'INTRODUCTION ==================== -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <!-- ▼ Remplace par tes initiales ou ton nom -->
+      <span class="intro__mark">Raphaël Bierlaire<span class="dot">.</span></span>
+      <div class="intro__bar"><span></span></div>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ==================== EN-TÊTE ==================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">Raphaël Bierlaire<span class="dot">.</span></a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="index.html" aria-current="page">Accueil</a>
+        <a href="parcours.html">Parcours</a>
+        <a href="stages.html">Stages</a>
+        <a href="projets.html">Projets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <p class="eyebrow reveal-up" style="--d: 0">Portfolio · <span data-year></span></p>
+
+        <!-- ▼ Ton nom et ton accroche -->
+        <h1>
+          <span class="line reveal-mask" style="--d: 0"><span>Raphaël Bierlaire</span></span>
+          <span class="line line--role reveal-mask" style="--d: 1"><span class="muted">Développeur en formation</span></span>
+        </h1>
+
+        <p class="hero__lead reveal-up" style="--d: 4">
+          Étudiant en BTS SIO option SLAM, attiré par la data et les systèmes embarqués.
+          Je développe en Python, C# et PHP ; en ESN j'ai automatisé la génération de
+          configurations de pare-feu, et je construis mes propres projets, dont un outil
+          d'analyse de télémétrie F1.
+          <strong style="color:var(--lime-100);font-weight:500">Je recherche un stage en informatique.</strong>
+        </p>
+
+        <div class="hero__actions reveal-up" style="--d: 5">
+          <button class="btn btn--accent" type="button" data-modal-open="modal-cv">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg>
+            Voir mon CV
+          </button>
+          <button class="btn" type="button" data-modal-open="modal-competences">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 4-6"/></svg>
+            Tableau de compétences
+          </button>
+        </div>
+
+        <!-- ▼ Trois infos clés : adapte ou supprime -->
+        <dl class="hero__meta reveal-up" style="--d: 6">
+          <div>
+            <dt>Recherche</dt>
+            <dd>Stage en informatique</dd>
+          </div>
+          <div>
+            <dt>Formation</dt>
+            <dd>BTS SIO SLAM, 2ᵉ année</dd>
+          </div>
+          <div>
+            <dt>Localisation</dt>
+            <dd>Veigné (37) · véhiculé</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ==================== APERÇU DES SECTIONS ==================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head on-scroll">
+          <p class="eyebrow">Explorer</p>
+          <h2>Le portfolio en trois volets</h2>
+          <p>Chaque partie se remplit au fil du temps. Clique pour ouvrir la page correspondante.</p>
+        </div>
+
+        <div class="card-grid">
+          <a class="card on-scroll" style="--d: 0" href="parcours.html">
+            <div class="card__body">
+              <p class="card__kicker">01 · Formation</p>
+              <h3 class="card__title">Parcours &amp; formations</h3>
+              <p class="card__text">Bac mention Bien (Maths, NSI) puis BTS SIO option SLAM, à Chambray-lès-Tours.</p>
+              <div class="card__foot">
+                <span class="card__link">Voir le parcours
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <a class="card on-scroll" style="--d: 1" href="stages.html">
+            <div class="card__body">
+              <p class="card__kicker">02 · Expérience</p>
+              <h3 class="card__title">Stages &amp; expériences</h3>
+              <p class="card__text">Stage réseau en ESN chez Open, et une année de césure comme créateur de contenu.</p>
+              <div class="card__foot">
+                <span class="card__link">Voir les stages
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <a class="card on-scroll" style="--d: 2" href="projets.html">
+            <div class="card__body">
+              <p class="card__kicker">03 · Réalisations</p>
+              <h3 class="card__title">Projets</h3>
+              <p class="card__text">Télémétrie F1 en Python, application web en PHP, et projets de BTS.</p>
+              <div class="card__foot">
+                <span class="card__link">Voir les projets
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== PIED DE PAGE / CONTACT ==================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__inner">
+      <div class="footer-top">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Une question, une opportunité&nbsp;?</h2>
+        </div>
+
+        <!-- ▼▼ REMPLACE LES LIENS ET LES PSEUDOS ▼▼ -->
+        <div class="contact-list">
+          <a class="contact-link" href="mailto:waihasics@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            <span class="contact-link__label">E-mail</span>
+            <span class="contact-link__value">waihasics@gmail.com</span>
+            <svg class="icon arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+
+          <a class="contact-link" href="https://github.com/Waaallyy" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.2c-3.34.72-4.04-1.42-4.04-1.42-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.69.83.57A12 12 0 0 0 12 .5z"/></svg>
+            <span class="contact-link__label">GitHub</span>
+            <span class="contact-link__value">github.com/Waaallyy</span>
+            <svg class="icon arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+
+          <a class="contact-link" href="https://www.linkedin.com/in/rapha%C3%ABl-bierlaire-264b15406/" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12M7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0"/></svg>
+            <span class="contact-link__label">LinkedIn</span>
+            <span class="contact-link__value">linkedin.com/in/raphaël-bierlaire</span>
+            <svg class="icon arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <!-- ▲▲ FIN DES LIENS DE CONTACT ▲▲ -->
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-year></span> Raphaël Bierlaire. Tous droits réservés.</p>
+        <nav aria-label="Liens de pied de page">
+          <a href="parcours.html">Parcours</a>
+          <a href="stages.html">Stages</a>
+          <a href="projets.html">Projets</a>
+          <a href="index.html#main">Haut de page</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALE : CV ==================== -->
+  <div class="modal" id="modal-cv" role="dialog" aria-modal="true" aria-labelledby="titre-cv" aria-hidden="true">
+    <div class="modal__backdrop" data-modal-close></div>
+
+    <div class="modal__dialog">
+      <div class="modal__head">
+        <div>
+          <p class="eyebrow">Curriculum vitae</p>
+          <h2 id="titre-cv">Mon CV</h2>
+        </div>
+
+        <div class="modal__head-actions">
+          <div class="tabs" data-tabs role="tablist" aria-label="Format du CV">
+            <button type="button" role="tab" data-tab="cv-pdf" aria-selected="true" data-autofocus>PDF</button>
+            <button type="button" role="tab" data-tab="cv-web" aria-selected="false">Version web</button>
+          </div>
+          <a class="btn btn--sm btn--accent" href="assets/cv/cv.pdf" download="CV-Raphael-Bierlaire.pdf">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg>
+            Télécharger
+          </a>
+          <button class="modal__close" type="button" data-modal-close aria-label="Fermer">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Onglet 1 : le PDF -->
+      <!-- ▼ Dépose ton CV ici : assets/cv/cv.pdf (garde ce nom, ou change le chemin ci-dessous)
+           Le chemin est dans data-pdf et non dans un <object> : sinon le navigateur charge
+           le PDF et démarre sa visionneuse dès l'ouverture de la page, même modale fermée.
+           Le script ne l'insère qu'à la première ouverture de la pop-up. -->
+      <div class="modal__body modal__body--flush tab-panel" id="cv-pdf" role="tabpanel"
+           data-pdf="assets/cv/cv.pdf">
+        <div class="pdf-fallback">
+          <p class="muted">Chargement du CV…</p>
+        </div>
+      </div>
+
+      <!-- Onglet 2 : le CV en HTML (utile si pas de PDF, et bon pour le référencement) -->
+      <div class="modal__body tab-panel" id="cv-web" role="tabpanel" hidden>
+        <article class="cv">
+          <header class="cv__header">
+            <h3 class="cv__name">Raphaël Bierlaire</h3>
+            <p class="cv__role">Stagiaire · BTS SIO option SLAM · data &amp; systèmes embarqués</p>
+            <!-- ▼ Ton numéro de téléphone et ta date de naissance figurent sur le PDF
+                 mais PAS ici : sur un site public ils sont aspirés par les robots.
+                 Le PDF reste téléchargeable pour ceux à qui tu le donnes. -->
+            <div class="cv__contact">
+              <span>waihasics@gmail.com</span>
+              <span>Veigné (37250)</span>
+              <span>Permis B · véhiculé</span>
+              <span>github.com/Waaallyy</span>
+              <span>linkedin.com/in/raphaël-bierlaire</span>
+            </div>
+          </header>
+
+          <section class="cv__section">
+            <h3>Profil</h3>
+            <p class="muted">
+              Étudiant en BTS SIO option SLAM, je recherche un stage en informatique, avec un
+              intérêt marqué pour la <strong>data</strong> (traitement, analyse, bases de données)
+              et les <strong>systèmes embarqués</strong>. Rigoureux et curieux, je progresse vite
+              dès qu'il s'agit de manipuler des outils concrets. Mon stage en ESN m'a mené à
+              l'automatisation d'infrastructures (Python, Ansible, Docker, pare-feu FortiGate),
+              et mon activité de créateur de contenu m'a apporté organisation, communication et
+              goût du travail en équipe.
+            </p>
+          </section>
+
+          <section class="cv__section">
+            <h3>Formation</h3>
+            <!-- ▼ Duplique ce bloc .cv__entry pour chaque formation -->
+            <div class="cv__entry">
+              <div class="cv__entry-date">2025 - 2027</div>
+              <div>
+                <h4>BTS SIO, option SLAM</h4>
+                <p class="cv__entry-org">Campus Saint-François d'Assise · Chambray-lès-Tours</p>
+                <p>Solutions Logicielles et Applications Métiers : développement, bases de données, gestion de projet.</p>
+              </div>
+            </div>
+            <div class="cv__entry">
+              <div class="cv__entry-date">2024</div>
+              <div>
+                <h4>Baccalauréat général, mention Bien</h4>
+                <p class="cv__entry-org">Lycée Sainte-Marguerite · Chambray-lès-Tours</p>
+                <p>Spécialités Mathématiques et NSI (Numérique et Sciences Informatiques).</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="cv__section">
+            <h3>Expériences</h3>
+            <!-- ▼ Duplique ce bloc pour chaque stage / job -->
+            <div class="cv__entry">
+              <div class="cv__entry-date">15 mars au 23 avril 2026</div>
+              <div>
+                <h4>Stagiaire réseau et infrastructure, 1ʳᵉ année de BTS</h4>
+                <p class="cv__entry-org">ESN · Groupe Open</p>
+                <p>
+                  Scripts Python automatisant la génération de configurations de pare-feu ·
+                  interventions en datacenter (installation et câblage de serveurs, switches
+                  et pare-feux, brassage réseau) · automatisation d'infrastructures avec
+                  Ansible et Docker.
+                </p>
+              </div>
+            </div>
+            <div class="cv__entry">
+              <div class="cv__entry-date">2024 - 2025</div>
+              <div>
+                <h4>Créateur de contenu &amp; organisateur d'événements</h4>
+                <p class="cv__entry-org">Année de césure · à mon compte</p>
+                <p>Diffusions en direct rassemblant jusqu'à 200 spectateurs simultanés, organisation d'événements et animation de communauté.</p>
+              </div>
+            </div>
+            <div class="cv__entry">
+              <div class="cv__entry-date">Juin 2022</div>
+              <div>
+                <h4>Stage d'observation de seconde</h4>
+                <p class="cv__entry-org">Georges Opticien</p>
+                <p>Relation client et techniques de précision.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="cv__section">
+            <h3>Compétences</h3>
+            <p class="muted">Résumé rapide : le détail se trouve dans le tableau de compétences.</p>
+            <p class="muted" style="margin-bottom:.8rem;font-size:.9rem">Langages</p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">C#</span>
+              <span class="tag">PHP</span>
+              <span class="tag">HTML</span>
+              <span class="tag">SQL</span>
+            </div>
+            <p class="muted" style="margin:1.2rem 0 .8rem;font-size:.9rem">Systèmes &amp; infrastructure</p>
+            <div class="tags">
+              <span class="tag">Linux</span>
+              <span class="tag">VMware</span>
+              <span class="tag">FortiGate</span>
+              <span class="tag">Ansible</span>
+              <span class="tag">Docker</span>
+              <span class="tag">WAMP</span>
+            </div>
+            <p class="muted" style="margin:1.2rem 0 .8rem;font-size:.9rem">Outils</p>
+            <div class="tags">
+              <span class="tag">Git</span>
+              <span class="tag">Visual Studio</span>
+              <span class="tag">PhpStorm</span>
+              <span class="tag">Pack Office</span>
+            </div>
+            <p class="muted" style="margin-top:1.2rem;font-size:.9rem">
+              En apprentissage : C++, Pandas, NumPy, Streamlit.
+            </p>
+          </section>
+
+          <section class="cv__section">
+            <h3>Langues</h3>
+            <p class="muted">Français (langue maternelle) · <strong>Anglais B2</strong> · <strong>Espagnol B1</strong></p>
+          </section>
+
+          <section class="cv__section">
+            <h3>Centres d'intérêt</h3>
+            <p class="muted">Motorsport · Échecs · Randonnée · Cuisine</p>
+          </section>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODALE : TABLEAU DE COMPÉTENCES ==================== -->
+  <div class="modal" id="modal-competences" role="dialog" aria-modal="true" aria-labelledby="titre-competences" aria-hidden="true">
+    <div class="modal__backdrop" data-modal-close></div>
+
+    <div class="modal__dialog">
+      <div class="modal__head">
+        <div>
+          <p class="eyebrow">Référentiel</p>
+          <h2 id="titre-competences">Tableau de compétences</h2>
+        </div>
+        <div class="modal__head-actions">
+          <button class="modal__close" type="button" data-modal-close aria-label="Fermer" data-autofocus>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal__body">
+        <div class="skills-intro">
+          <p class="muted" style="max-width:56ch">
+            Niveau de maîtrise auto-évalué de 1 à 5, avec le contexte dans lequel la compétence a été mise en œuvre.
+          </p>
+          <div class="legend">
+            <span><strong class="accent">1 à 2</strong> Notions</span>
+            <span><strong class="accent">3</strong> Autonome</span>
+            <span><strong class="accent">4 à 5</strong> Maîtrise / expertise</span>
+          </div>
+        </div>
+
+        <!-- ▼▼ TABLEAU DE COMPÉTENCES BTS SIO : 6 blocs, 21 sous-compétences ▼▼
+
+             POUR CHAQUE SOUS-COMPÉTENCE :
+             • Le niveau se règle sur <td class="level"> : data-level="0" (vide)
+               à "5" (pense à mettre l'aria-label en accord).
+             • Clique sur l'intitulé pour déplier le panneau de preuve.
+             • Dans ce panneau, remplis la SITUATION puis ajoute tes liens :
+                 <a class="proof__link" href="..." target="_blank" rel="noopener">Nom du lien</a>
+               Un lien peut pointer vers un projet, un dépôt GitHub, une page du
+               portfolio (ex. stages.html) ou un document (ex. assets/docs/xxx.pdf).
+             • Duplique un bloc <a class="proof__link"> pour ajouter une preuve.
+        ▼▼ -->
+
+        <div class="skills-group">
+          <h3>Bloc 1 : Gérer le patrimoine informatique</h3>
+          <div class="table-wrap">
+            <table class="skills">
+              <thead>
+                <tr>
+                  <th scope="col">Sous-compétence</th>
+                  <th scope="col">Niveau</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-1-1">Recenser et identifier les ressources numériques</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-1-1" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-1-2">Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-1-2" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-1-3">Mettre en place et vérifier les niveaux d'habilitation associés à un service</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-1-3" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-1-4">Vérifier les conditions de la continuité d'un service informatique</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-1-4" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-1-5">Gérer des sauvegardes</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-1-5" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <h3>Bloc 2 : Répondre aux incidents et aux demandes d'assistance et d'évolution</h3>
+          <div class="table-wrap">
+            <table class="skills">
+              <thead>
+                <tr>
+                  <th scope="col">Sous-compétence</th>
+                  <th scope="col">Niveau</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-2-1">Collecter, suivre et orienter des demandes</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-2-1" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-2-2">Traiter des demandes concernant les services réseau et système, applicatifs</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-2-2" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-2-3">Traiter des demandes concernant les applications</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-2-3" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <h3>Bloc 3 : Développer la présence en ligne de l'organisation</h3>
+          <div class="table-wrap">
+            <table class="skills">
+              <thead>
+                <tr>
+                  <th scope="col">Sous-compétence</th>
+                  <th scope="col">Niveau</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-3-1">Participer à la valorisation de l'image de l'organisation sur les médias numériques en tenant compte du cadre juridique et des enjeux économiques</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-3-1" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-3-2">Référencer les services en ligne de l'organisation et mesurer leur visibilité</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-3-2" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-3-3">Participer à l'évolution d'un site Web exploitant les données de l'organisation</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-3-3" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <h3>Bloc 4 : Travailler en mode projet</h3>
+          <div class="table-wrap">
+            <table class="skills">
+              <thead>
+                <tr>
+                  <th scope="col">Sous-compétence</th>
+                  <th scope="col">Niveau</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-4-1">Analyser les objectifs et les modalités d'organisation d'un projet</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-4-1" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-4-2">Planifier les activités</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-4-2" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-4-3">Évaluer les indicateurs de suivi d'un projet et analyser les écarts</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-4-3" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <h3>Bloc 5 : Mettre à disposition des utilisateurs un service informatique</h3>
+          <div class="table-wrap">
+            <table class="skills">
+              <thead>
+                <tr>
+                  <th scope="col">Sous-compétence</th>
+                  <th scope="col">Niveau</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-5-1">Réaliser les tests d'intégration et d'acceptation d'un service</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-5-1" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-5-2">Déployer un service</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-5-2" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-5-3">Accompagner les utilisateurs dans la mise en place d'un service</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-5-3" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <h3>Bloc 6 : Organiser son développement professionnel</h3>
+          <div class="table-wrap">
+            <table class="skills">
+              <thead>
+                <tr>
+                  <th scope="col">Sous-compétence</th>
+                  <th scope="col">Niveau</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-6-1">Mettre en place son environnement d'apprentissage personnel</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-6-1" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-6-2">Mettre en œuvre des outils et stratégies de veille informationnelle</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-6-2" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-6-3">Gérer son identité professionnelle</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-6-3" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="skill-toggle" type="button"
+                            aria-expanded="false" aria-controls="preuve-6-4">Développer son projet professionnel</button>
+                  </td>
+                  <td class="level" data-level="0" aria-label="Niveau non renseigné"></td>
+                </tr>
+                <tr class="skill-proof" id="preuve-6-4" hidden>
+                  <td colspan="2">
+                    <div class="proof">
+                      <p class="proof__situation"><strong>Situation :</strong> à décrire.</p>
+                      <div class="proof__links">
+                        <a class="proof__link" href="#">Ajouter un lien de preuve
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- ▲▲ FIN DES BLOCS ▲▲ -->
+
+        <div class="placeholder-note">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <p>
+            Tableau vierge, prêt pour l'épreuve <strong>E6</strong>. Pour ajouter une ligne :
+            copie un <code>&lt;tr&gt;</code> et renseigne le <code>data-level</code>
+            (de 1 à 5, avec l'<code>aria-label</code> en accord) ; <code>0</code> laisse
+            les pastilles vides. Pour un nouveau bloc, duplique un
+            <code>&lt;div class="skills-group"&gt;</code>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

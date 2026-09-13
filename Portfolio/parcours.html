@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parcours et formations · Raphaël Bierlaire</title>
+  <meta name="description" content="Parcours scolaire, formations et certifications de Raphaël Bierlaire." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23192115'/><circle cx='50' cy='50' r='18' fill='%23EE7B3C'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ==================== EN-TÊTE ==================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">Raphaël Bierlaire<span class="dot">.</span></a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="parcours.html" aria-current="page">Parcours</a>
+        <a href="stages.html">Stages</a>
+        <a href="projets.html">Projets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================== BANDEAU ==================== -->
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <p class="eyebrow">01 · Formation</p>
+        <h1>Parcours &amp; formations</h1>
+        <p>Les étapes de mon cursus : diplômes, spécialités et certifications.</p>
+      </div>
+    </section>
+
+    <!-- ==================== FRISE DES FORMATIONS ==================== -->
+    <section class="section">
+      <div class="container">
+
+        <div class="timeline">
+
+          <!-- ▼▼ MODÈLE : duplique ce bloc pour chaque formation (de la plus récente à la plus ancienne) ▼▼ -->
+          <article class="timeline__item on-scroll" style="--d: 0">
+            <p class="timeline__date">2025 - 2027 <span class="muted">· en cours</span></p>
+            <h2 class="timeline__title">BTS SIO, option SLAM</h2>
+            <p class="timeline__org">Campus Saint-François d'Assise <span class="sep">·</span> Chambray-lès-Tours</p>
+            <div class="timeline__body">
+              <p>
+                Services Informatiques aux Organisations, option <strong>Solutions Logicielles
+                et Applications Métiers</strong>, la voie développement du BTS SIO.
+              </p>
+              <ul>
+                <li>Conception et développement d'applications</li>
+                <li>Bases de données : modélisation, SQL, exploitation</li>
+                <li>Cybersécurité, gestion de projet et support aux utilisateurs</li>
+              </ul>
+            </div>
+            <div class="tags">
+              <span class="tag">Développement</span>
+              <span class="tag">SLAM</span>
+              <span class="tag">Bac +2</span>
+            </div>
+          </article>
+          <!-- ▲▲ FIN DU MODÈLE ▲▲ -->
+
+          <article class="timeline__item on-scroll" style="--d: 1">
+            <p class="timeline__date">2024 - 2025</p>
+            <h2 class="timeline__title">Année de césure</h2>
+            <p class="timeline__org">Créateur de contenu <span class="sep">·</span> organisateur d'événements</p>
+            <div class="timeline__body">
+              <p>
+                Une année hors cursus consacrée à la création de contenu et à l'événementiel,
+                avec des directs rassemblant jusqu'à 200 spectateurs simultanés.
+                <a href="stages.html" style="color:var(--clem-400);border-bottom:1px solid currentColor">Le détail est sur la page Stages &amp; expériences</a>.
+              </p>
+            </div>
+            <div class="tags">
+              <span class="tag">Communication</span>
+              <span class="tag">Événementiel</span>
+            </div>
+          </article>
+
+          <article class="timeline__item on-scroll" style="--d: 2">
+            <p class="timeline__date">2024</p>
+            <h2 class="timeline__title">Baccalauréat général <span class="accent">, mention Bien</span></h2>
+            <p class="timeline__org">Lycée Sainte-Marguerite <span class="sep">·</span> Chambray-lès-Tours</p>
+            <div class="timeline__body">
+              <p>Spécialités conservées en terminale : Mathématiques et NSI.</p>
+              <ul>
+                <li><strong>Mathématiques</strong> : raisonnement, logique, rigueur</li>
+                <li><strong>NSI</strong> : programmation Python, algorithmique, structures de données</li>
+                <li><strong>LLCE</strong> : suivie en première, abandonnée en terminale</li>
+              </ul>
+            </div>
+            <div class="tags">
+              <span class="tag">Mathématiques</span>
+              <span class="tag">NSI</span>
+              <span class="tag">Mention Bien</span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- ==================== CERTIFICATIONS ==================== -->
+        <div class="section-head on-scroll" style="margin-top: clamp(4rem, 8vw, 6rem)">
+          <p class="eyebrow">Compléments</p>
+          <h2>Certifications &amp; formations courtes</h2>
+          <p>MOOC, attestations, permis, habilitations… tout ce qui complète le cursus principal.</p>
+        </div>
+
+        <div class="empty-state on-scroll">
+          <h3>Rien à afficher pour l'instant</h3>
+          <p>Les certifications obtenues au fil du BTS viendront s'ajouter ici.</p>
+        </div>
+
+        <!-- ▼ Quand tu en auras une, remplace le bloc .empty-state ci-dessus par cette grille :
+        <div class="card-grid">
+          <article class="card on-scroll" style="--d: 0">
+            <div class="card__body">
+              <p class="card__kicker">20XX</p>
+              <h3 class="card__title">Nom de la certification</h3>
+              <p class="card__text">Organisme émetteur · ce que la certification valide.</p>
+              <div class="card__foot">
+                <a class="card__link" href="assets/docs/attestation.pdf" target="_blank" rel="noopener">Voir l'attestation
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+        ▲ -->
+
+        <div class="placeholder-note on-scroll">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <p>Pour ajouter une formation : duplique un bloc <code>&lt;article class="timeline__item"&gt;</code> dans la frise ci-dessus.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== PIED DE PAGE / CONTACT ==================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__inner">
+      <div class="footer-top">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Une question, une opportunité&nbsp;?</h2>
+        </div>
+
+        <div class="contact-list">
+          <a class="contact-link" href="mailto:waihasics@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            <span class="contact-link__label">E-mail</span>
+            <span class="contact-link__value">waihasics@gmail.com</span>
+            <svg class="icon arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+
+          <a class="contact-link" href="https://github.com/Waaallyy" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.2c-3.34.72-4.04-1.42-4.04-1.42-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.69.83.57A12 12 0 0 0 12 .5z"/></svg>
+            <span class="contact-link__label">GitHub</span>
+            <span class="contact-link__value">github.com/Waaallyy</span>
+            <svg class="icon arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+
+          <a class="contact-link" href="https://www.linkedin.com/in/rapha%C3%ABl-bierlaire-264b15406/" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12M7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0"/></svg>
+            <span class="contact-link__label">LinkedIn</span>
+            <span class="contact-link__value">linkedin.com/in/raphaël-bierlaire</span>
+            <svg class="icon arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-year></span> Raphaël Bierlaire. Tous droits réservés.</p>
+        <nav aria-label="Liens de pied de page">
+          <a href="index.html">Accueil</a>
+          <a href="stages.html">Stages</a>
+          <a href="projets.html">Projets</a>
+          <a href="#main">Haut de page</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
