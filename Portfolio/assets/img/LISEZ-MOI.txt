@@ -1,8 +1,0 @@
-Place ici les visuels de tes projets (captures, logos, photos).
-
-Format conseillé : 16/9, largeur 1200 px minimum, en .jpg ou .webp.
-
-Dans projets.html, remplace ensuite :
-    <span class="placeholder">Visuel du projet</span>
-par :
-    <img src="assets/img/nom-du-fichier.jpg" alt="Aperçu du projet" />
