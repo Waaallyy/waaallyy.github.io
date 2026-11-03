@@ -78,13 +78,14 @@
       font-weight: 800;
       min-height: 1.05em;
     }
-    .caret {
-      display: inline-block; width: .08em; height: .85em;
-      background: var(--accent); margin-left: .06em;
-      vertical-align: -.05em;
-      animation: blink 1s steps(1) infinite;
+    /* Nom : se découvre depuis le centre vers les bords */
+    .name { display: inline-block; }
+    .js .name { clip-path: inset(-.25em 50% -.25em 50%); letter-spacing: -.12em; }
+    .js .name.unveil { animation: unveil .75s cubic-bezier(.65, 0, .35, 1) forwards; }
+    @keyframes unveil {
+      from { clip-path: inset(-.25em 50% -.25em 50%); letter-spacing: -.12em; }
+      to   { clip-path: inset(-.25em 0 -.25em 0);     letter-spacing: -.035em; }
     }
-    @keyframes blink { 50% { opacity: 0; } }
     .tagline { max-width: 600px; margin: 22px 0 36px; font-size: 20px; color: var(--muted); }
     .tagline strong { color: var(--text); font-weight: 600; }
     .actions { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -159,6 +160,15 @@
     .card-link { font-weight: 600; font-size: 15px; color: var(--accent); text-decoration: none; }
     .card-link:hover { text-decoration: underline; }
 
+    /* Groupes de projets : personnels / études */
+    .project-group + .project-group { margin-top: 72px; }
+    .group-head {
+      display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;
+      gap: 6px 16px; margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--line);
+    }
+    .group-head h3 { font-size: 22px; margin: 0; }
+    .group-head p { margin: 0; color: var(--muted); font-size: 15px; }
+
     /* Parcours */
     .timeline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
     .timeline { list-style: none; margin: 0; padding: 0 0 0 24px; border-left: 2px solid var(--line); }
@@ -211,6 +221,7 @@
       *, *::before, *::after { animation: none !important; transition: none !important; }
       html { scroll-behavior: auto; }
       .js .reveal, .js .after-type, .js header { opacity: 1; transform: none; }
+      .js .name { clip-path: none; letter-spacing: inherit; }
     }
   </style>
   <script>document.documentElement.classList.add('js');</script>
@@ -236,7 +247,7 @@
       <div class="wrap" id="intro">
         <span class="badge after-type">Disponible pour un stage · Indre-et-Loire (37)</span>
         <p class="hello after-type">Bonjour, je suis</p>
-        <h1><span id="typed" data-text="Raphaël Bierlaire">Raphaël Bierlaire</span><span class="caret" aria-hidden="true"></span></h1>
+        <h1><span class="name" id="name">Raphaël Bierlaire</span></h1>
         <p class="tagline after-type">Étudiant en <strong>BTS SIO, option SLAM</strong>. Je m'intéresse surtout à la <strong>data</strong> et aux <strong>systèmes embarqués</strong>, avec une passion pour la télémétrie en sport automobile.</p>
         <div class="actions after-type">
           <a href="#projets" class="btn primary">Voir mes projets</a>
@@ -293,7 +304,12 @@
       <div class="wrap">
         <p class="label reveal">Projets</p>
         <h2 class="reveal">Ce que j'ai construit.</h2>
-        <div class="projects">
+        <div class="project-group">
+          <div class="group-head reveal">
+            <h3>Projets personnels</h3>
+            <p>Réalisés sur mon temps libre, par passion.</p>
+          </div>
+          <div class="projects">
 
           <article class="card wide reveal">
             <div class="thumb">
@@ -361,6 +377,93 @@
             </div>
           </article>
 
+          </div>
+        </div>
+
+        <div class="project-group">
+          <div class="group-head reveal">
+            <h3>Projets d'études</h3>
+            <p>Réalisés dans le cadre du BTS SIO.</p>
+          </div>
+          <div class="projects">
+
+          <article class="card reveal">
+            <div class="thumb">
+              <svg viewBox="0 0 320 180" role="img" aria-label="Visuel : bouclier de sécurité et lignes de texte d'une leçon">
+                <rect width="320" height="180" fill="#f2f5f1"/>
+                <rect x="150" y="38" width="140" height="104" rx="10" fill="#fff" stroke="#cfdcd3"/>
+                <rect x="166" y="56" width="70" height="8" rx="4" fill="#1e8a57"/>
+                <g fill="#dfe8e2">
+                  <rect x="166" y="76" width="108" height="6" rx="3"/><rect x="166" y="90" width="96" height="6" rx="3"/>
+                  <rect x="166" y="104" width="104" height="6" rx="3"/><rect x="166" y="118" width="64" height="6" rx="3"/>
+                </g>
+                <path d="M88 34 L128 48 V88 C128 116 110 134 88 146 C66 134 48 116 48 88 V48 Z" fill="#1e8a57"/>
+                <rect x="74" y="84" width="28" height="22" rx="4" fill="#fff"/>
+                <path d="M79 84 V77 A9 9 0 0 1 97 77 V84" fill="none" stroke="#fff" stroke-width="4"/>
+                <circle cx="88" cy="94" r="3" fill="#1e8a57"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <div class="card-head">
+                <h3>Cyber4All</h3>
+                <span class="status">2e année · En binôme</span>
+              </div>
+              <p>Projet commun à toute la promo SLAM : une plateforme de sensibilisation à la cybersécurité (glossaire, votes, contributions). Sur la branche du groupe B, nous avons ajouté un espace d'apprentissage avec thèmes, leçons, quiz et interface d'administration. Ma part : la page leçon, avec un rendu Markdown protégé contre les failles XSS et la navigation entre les leçons d'un thème.</p>
+              <ul class="tags"><li>PHP</li><li>CodeIgniter 4</li><li>MySQL</li><li>JavaScript</li><li>Git</li></ul>
+              <a class="card-link" href="https://github.com/arthreto/cyber4All/tree/Groupe-B" target="_blank" rel="noopener">Voir la branche sur GitHub →</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="thumb">
+              <svg viewBox="0 0 320 180" role="img" aria-label="Visuel : deux joueurs face à face avec leur score">
+                <rect width="320" height="180" fill="#f2f5f1"/>
+                <g fill="#1e8a57"><circle cx="78" cy="66" r="18"/><path d="M48 116 a30 26 0 0 1 60 0 Z"/></g>
+                <g fill="#9cc9b1"><circle cx="242" cy="66" r="18"/><path d="M212 116 a30 26 0 0 1 60 0 Z"/></g>
+                <text x="160" y="96" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="800" fill="#171a17">VS</text>
+                <g font-family="ui-monospace, Menlo, monospace" font-size="12" fill="#5d655f" text-anchor="middle">
+                  <text x="78" y="148">4/5</text><text x="242" y="148">3/5</text>
+                </g>
+                <g>
+                  <rect x="48" y="156" width="60" height="6" rx="3" fill="#dfe8e2"/><rect x="48" y="156" width="48" height="6" rx="3" fill="#1e8a57"/>
+                  <rect x="212" y="156" width="60" height="6" rx="3" fill="#dfe8e2"/><rect x="212" y="156" width="36" height="6" rx="3" fill="#9cc9b1"/>
+                </g>
+              </svg>
+            </div>
+            <div class="card-body">
+              <div class="card-head">
+                <h3>Quizz Battle</h3>
+                <span class="status">1re année · En binôme</span>
+              </div>
+              <p>Application de bureau où deux joueurs s'affrontent sur un quiz : choix du thème et de la difficulté, cinq questions chacun à tour de rôle, comptes joueurs avec statistiques et panneau d'administration. Ma part : la bibliothèque de classes métier et d'accès aux données (CRUD), la connexion à la base, la gestion des comptes, le déroulement d'une partie et l'écran de fin de jeu.</p>
+              <ul class="tags"><li>C#</li><li>.NET</li><li>WinForms</li><li>MySQL</li><li>Git</li></ul>
+              <a class="card-link" href="https://github.com/SuperrTatane/quizz_battle" target="_blank" rel="noopener">Voir sur GitHub →</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="thumb">
+              <svg viewBox="0 0 320 180" role="img" aria-label="Visuel : silhouette de sommets enneigés">
+                <rect width="320" height="180" fill="#f2f5f1"/>
+                <path d="M0 180 L70 100 L104 128 L160 44 L212 112 L244 88 L320 158 L320 180 Z" fill="#9cc9b1"/>
+                <path d="M160 44 L176 68 L167 64 L160 72 L152 63 L144 68 Z" fill="#fff"/>
+                <path d="M0 180 L48 142 L92 160 L142 122 L194 152 L252 126 L320 170 L320 180 Z" fill="#1e8a57"/>
+                <line x1="160" y1="44" x2="160" y2="20" stroke="#171a17" stroke-width="2"/>
+                <path d="M160 20 L176 25 L160 30 Z" fill="#1e8a57"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <div class="card-head">
+                <h3>Summit Explorers</h3>
+                <span class="status">1re année · Individuel</span>
+              </div>
+              <p>Site de réservation de voyages vers les plus hauts sommets du monde (K2, Mont Blanc, Everest). Comptes utilisateurs, réservations avec historique et espace d'administration pour gérer les voyages et les clients. Base MySQL avec requêtes préparées et mots de passe hachés.</p>
+              <ul class="tags"><li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li></ul>
+              <a class="card-link" href="https://github.com/Waaallyy/SummitExplorers" target="_blank" rel="noopener">Voir sur GitHub →</a>
+            </div>
+          </article>
+
+          </div>
         </div>
       </div>
     </section>
@@ -478,8 +581,7 @@
     (function () {
       var body = document.body;
       var intro = document.getElementById('intro');
-      var typed = document.getElementById('typed');
-      var text = typed.getAttribute('data-text');
+      var name = document.getElementById('name');
       var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       function finishIntro() {
@@ -487,17 +589,14 @@
         body.classList.add('ready');
       }
 
-      // 1. Le nom s'écrit lettre par lettre, puis le reste apparaît en fondu
+      // 1. Le nom se découvre du centre vers l'extérieur, puis le reste apparaît en fondu
       if (reduced) {
         finishIntro();
       } else {
-        typed.textContent = '';
-        var i = 0;
-        setTimeout(function step() {
-          typed.textContent = text.slice(0, ++i);
-          if (i < text.length) setTimeout(step, 70 + Math.random() * 50);
-          else setTimeout(finishIntro, 250);
-        }, 400);
+        setTimeout(function () {
+          name.classList.add('unveil');
+          setTimeout(finishIntro, 550);
+        }, 200);
       }
 
       // 2. Les sections apparaissent au défilement
